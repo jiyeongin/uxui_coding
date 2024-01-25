@@ -1,0 +1,34 @@
+/* Wrapper Style */
+.wrapper {
+  width: var(--ls-full);
+  height: auto;
+  overflow: hidden;
+}
+
+/* Layout Left Right Offset Setting Container */
+.container {
+  width: var(--ls-full);
+  max-width: 1280px;
+  height: auto;
+  margin: auto;
+  padding: 0 2.5rem;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  padding: 7.5rem 0;
+}
+
+/* Common Button Style */
+.cmn-btn {
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.cmn-btn:hover {
+  background: #333;
+}

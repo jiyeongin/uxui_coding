@@ -1,0 +1,193 @@
+/* media.css에서는 기존에 사용했던 이름 그대로 사용해야 한다 
+ex. '.header .info li.sns'를 '.header li.sns'로 요약해서 쓰면 안됨 */
+
+@media screen and (max-width: 980px) {
+  /* Common Style */
+  .cmn-btn {
+    font-size: 0.875rem;
+  }
+  .header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+  }
+
+  .header .logo img {
+    width: 100px;
+  }
+
+  .header .nav,
+  .header .info {
+    display: none;
+  }
+
+  .header .mobile-icon-wrapper {
+    display: block;
+  }
+
+  .new-mobile-menu {
+    display: block;
+    position: absolute;
+    top: 101%;
+    /* top:100%란 부모의 높이만큼 아래로 내려간 것 */
+    width: 100%;
+    background: #fff;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  .new-mobile-menu .nav {
+    display: block;
+  }
+
+  .new-mobile-menu .nav li {
+    text-align: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .new-mobile-menu .nav li:hover a {
+    text-decoration: underline;
+  }
+
+  .new-mobile-menu .info {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.6;
+  }
+
+  #main-section .landing-text-box h1 {
+    text-shadow: 1px 1px 1px #222;
+    /* 그림자 효과 : X, Y, 흐림 정도, 색상 */
+  }
+
+  #main-section .landing-text-box p {
+    width: 60%;
+  }
+
+  /* 놓쳤다!! */
+  .features .feature {
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main-section .landing-text-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  #main-section .landing-text-box p {
+    width: 100%;
+    text-shadow: 1px 1px 2px 3px #fff;
+  }
+
+  /* Meet Section Media Style */
+  .meet-section .meet-wrapper {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .meet-section .meet-text-box {
+    width: 100%;
+  }
+
+  .meet-section .meet-text-box p {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1.8rem 0 1rem;
+  }
+
+  .meet-section .meet-text-box span {
+    font-size: 1rem;
+  }
+
+  .meet-section .meet-image-box {
+    width: 100%;
+    column-gap: 0.625rem;
+  }
+
+  .meet-section .meet-left-image {
+    row-gap: 0.625rem;
+  }
+
+  /* Features Section Media Style */
+
+  .features {
+    flex-wrap: wrap;
+  }
+
+  .features .feature {
+    width: 100%;
+  }
+
+  /* .features-section {
+    padding: 3rem;
+  }
+
+  .features-section .container {
+    width: 100%;
+  }
+
+  .features-section .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .feature {
+    width: 60%;
+    padding: 0.75rem;
+  }
+
+  .features .feature h4 {
+    font-size: 1.1rem;
+  }
+
+  .features .feature p {
+    font-size: 0.75rem;
+  } */
+
+  footer .footer-upper,
+  footer .footer-info,
+  footer .footer-lower {
+    flex-direction: column;
+  }
+
+  footer .footer-logo {
+    margin-bottom: 1.25rem;
+  }
+
+  footer .footer-nav a {
+    padding: 0.5rem;
+  }
+
+  footer .footer-info {
+    row-gap: 1.25rem;
+    /* justify-content: center; _ 위에 flex-direction:column으로 되어있기 때문에 반대로 해야함*/
+    align-items: center;
+  }
+
+  footer .footer-lower {
+    row-gap: 1.25rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main-section .landing-text-box h1 {
+    font-size: 1.4rem;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+}

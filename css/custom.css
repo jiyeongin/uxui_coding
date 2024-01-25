@@ -1,0 +1,513 @@
+/* Header Style */
+.header {
+  width: var(--ls-full);
+  height: auto;
+  position: fixed;
+  padding: 1.75rem 0;
+  /* border: 1px solid #efefef; */
+  z-index: 999;
+  transition: all 0.4s;
+}
+
+header.active {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .nav li a {
+  font-size: 0.875rem;
+}
+
+.header .nav li a:hover {
+  text-decoration: underline;
+  /* background: lightseagreen; */
+}
+
+.header .info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .info li.sns ul {
+  display: flex;
+}
+
+.header .info li:not(.user) {
+  padding: 0 0 0 1rem;
+  display: flex;
+}
+/* li 요소를 선택하되 그 중 .user라는 요소를 제외 */
+
+.header .info li a {
+  font-size: 0.875rem;
+}
+
+header li.sns a {
+  width: 20px;
+  display: inline-block;
+}
+
+header li.sns a img {
+  width: 100%;
+}
+
+.header li.user {
+  padding: 0 0 0 0.25rem;
+  /* display: flex; */
+}
+
+.header li.user a {
+  border: 1px solid;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  height: 1.8rem; /* inline이어서 안먹힘 , display: flex 로 해결 */
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+.header li.cart a {
+  background: #000;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger Menu Animation Effect */
+.header .mobile-icon-wrapper {
+  display: none;
+}
+
+.header .mobile-icon {
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+.header .mobile-icon span.bar_line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.header .mobile-icon span.bar_line:nth-child(2) {
+  margin: 5px 0;
+  /* opacity: 0; */
+}
+
+.header .mobile-icon.active .bar_line:nth-child(1) {
+  animation: top 0.5s ease forwards;
+}
+.header .mobile-icon.active .bar_line:nth-child(2) {
+  animation: middle 0.1s ease forwards;
+}
+.header .mobile-icon.active .bar_line:nth-child(3) {
+  animation: bottom 0.5s ease forwards;
+}
+
+.header .mobile-icon.not-active .bar_line:nth-child(1) {
+  animation: top-back 0.5s ease forwards;
+}
+.header .mobile-icon.not-active .bar_line:nth-child(2) {
+  animation: middle-back 0.1s ease forwards;
+}
+.header .mobile-icon.not-active .bar_line:nth-child(3) {
+  animation: bottom-back 0.5s ease forwards;
+}
+
+@keyframes top {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 7px;
+  }
+  100% {
+    transform: rotate(40deg);
+    top: 10px;
+  }
+}
+
+@keyframes top-back {
+  0% {
+    transform: rotate(40deg);
+    top: 10px;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 7px;
+  }
+  100% {
+    transform: rotate(0deg);
+    top: 0px;
+  }
+}
+
+@keyframes middle {
+  0% {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+  100% {
+    /* transform: scale(0); */
+    opacity: 0;
+  }
+}
+
+@keyframes middle-back {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bottom {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+    bottom: 7px;
+  }
+  100% {
+    transform: rotate(-40deg);
+    bottom: 4px;
+  }
+}
+
+@keyframes bottom-back {
+  0% {
+    transform: rotate(-40deg);
+    bottom: 4px;
+  }
+  50% {
+    transform: rotate(0deg);
+    bottom: 7px;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.new-mobile-menu {
+  display: none;
+}
+
+/* Landing Section Style */
+#main-section {
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#main-section .landing-text-box {
+  z-index: 10;
+  position: relative;
+  /* position:static 이면 z-index 안먹힘 */
+}
+
+#main-section .landing-text-box h1 {
+  font-size: var(--fs-title);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+#main-section .landing-text-box p {
+  padding: 1.25rem 0;
+  width: 33.33%;
+}
+
+/* Meet Section Style */
+.meet-section .meet-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+
+.meet-section .meet-text-box {
+  width: 50%;
+}
+
+.meet-section .meet-text-box h4 {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.meet-section .meet-text-box p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  width: 80%;
+  padding: 2.5rem 0 1.25rem;
+  position: relative;
+}
+
+.meet-section .meet-text-box p:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.meet-section .meet-text-box span {
+  font-size: 1.125rem;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  /* 선과 글씨가 자식으로 인식됨. span의 자식은 두개 */
+}
+
+/* 선 만들기 */
+.meet-section .meet-text-box span:before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: #000;
+  display: block;
+}
+
+.meet-section .meet-image-box {
+  width: 50%;
+  display: flex;
+  column-gap: 1.25rem;
+  align-items: center;
+}
+
+.meet-section .meet-image-box img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.meet-section .meet-left-image {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  row-gap: 1.25rem;
+  align-items: flex-end;
+  /* 좌우는 justify-content로 움직여지는데 flex-direction 때문에 '상하/좌우'가 바꼈기 때문에 align-items로 좌우 움직일 수 있음 */
+}
+
+.meet-section .meet-left-image img:nth-child(2) {
+  width: 80%;
+}
+
+.meet-section .meet-right-image {
+  width: 50%;
+}
+
+.meet-section .ef_01 {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.meet-section .ef_02 {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.meet-section .ef_03 {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.meet-section.on .ef_01 {
+  animation: sl_down 0.5s 1 forwards;
+}
+
+.meet-section.on .ef_02 {
+  animation: sl_up 0.5s 1 forwards;
+  animation-delay: 0.5s;
+}
+
+.meet-section.on .ef_03 {
+  animation: sl_left 0.5s 1 forwards;
+  animation-delay: 1s;
+}
+
+@keyframes sl_down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes sl_up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes sl_left {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* Features Section Style */
+.features {
+  display: flex;
+}
+
+.features .feature {
+  width: 33.33%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* row-gap: 1rem; */
+}
+
+.features .feature h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 1.25rem 0;
+}
+
+.features .feature p {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* Slider Section Style */
+.slider-section {
+  position: relative;
+}
+
+.slider-section .swiper-slide {
+  display: flex;
+  width: 100%;
+}
+
+.slider-section .swiper-slide > div {
+  width: 50%;
+  padding: 0 1.25rem;
+}
+
+.slider-section .swiper-slide > div > img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.slider-section .swiper-pagination {
+  bottom: 40px;
+}
+
+/* Footer Style */
+footer {
+  padding: 3rem 0;
+  width: 100%;
+  height: auto;
+}
+
+footer .footer-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-logo {
+  width: 100px;
+}
+
+footer .footer-logo img {
+  width: 100%;
+}
+
+footer .footer-info {
+  display: flex;
+}
+
+footer .footer-info ul {
+  display: flex;
+}
+
+footer .footer-nav a {
+  font-size: 0.875rem;
+  padding: 1.25rem;
+}
+
+footer .footer-sns li {
+  padding-left: 1rem;
+}
+
+footer .footer-sns li a {
+  width: 20px;
+  display: inline-block;
+}
+
+footer .footer-sns li img {
+  width: 100%;
+}
+
+footer .footer-line {
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin: 1.25rem 0;
+}
+
+footer .footer-lower {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  align-items: center;
+}
+
+footer .footer-lower a {
+  text-decoration: underline;
+}
