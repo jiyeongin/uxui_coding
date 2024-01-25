@@ -438,18 +438,86 @@ header li.sns a img {
   padding: 0 1.25rem;
 }
 
+.slider-section .swiper-slide > div.slider-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.25rem;
+}
+
+.slider-section .swiper-slide > div.slider-text h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.slider-section .swiper-slide > div.slider-text p {
+  font-size: 0.875rem;
+  width: 90%;
+}
+
+/* .swiper-slide .swiper-slide-active .slider-text  */
+.slider-section .swiper-slide > div.slider-text {
+  animation: show-up 0.5s 1 forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes show-up {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .slider-section .swiper-slide > div > img {
   width: 100%;
   border-radius: 0.25rem;
 }
 
+.slider-section .container {
+  position: relative;
+}
+
+.slider-section .slider-nav {
+  background: #fff;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px #333;
+}
+
+.slider-section .swiper-button-next:after,
+.slider-section .swiper-button-prev:after {
+  font-size: 1.5rem;
+}
+
+.slider-section .swiper-button-prev {
+  left: 1.5rem;
+}
+.slider-section .swiper-button-next {
+  right: 1.5rem;
+}
+
 .slider-section .swiper-pagination {
-  bottom: 40px;
+  bottom: -4.375rem;
+}
+
+.slider-section .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.slider-section .swiper-pagination-bullet-active {
+  background: #000;
 }
 
 /* Footer Style */
 footer {
-  padding: 3rem 0;
+  padding: 4.5rem 0;
   width: 100%;
   height: auto;
 }

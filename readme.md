@@ -1,23 +1,11 @@
--- Verson 1.0.0
-\*\* header, footer, landing, section1
+### Version 1.0.0 :
 
--- Verson 1.1.0
-\*\* header, footer, landing, section2
+- header, footer, hero
 
--- Verson 1.2.0
-\*\* header, footer, landing, section3
+### Version 1.1.0 :
 
--- Verson 1.3.0
-\*\* header, footer, landing, section4
+- meet section, features section
 
--- Verson 1.4.0
-\*\* header, footer, landing, section5
+### Version 1.2.0 :
 
--- Verson 1.5.0
-\*\* header, footer, landing, section6
-
--- Verson 2.0.0
-\*\* header, footer, landing, section7
-
--- Version 2.0.0~
-\*\* GSAP Animation
+- slider section

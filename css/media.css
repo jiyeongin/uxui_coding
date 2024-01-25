@@ -6,6 +6,11 @@ ex. '.header .info li.sns'를 '.header li.sns'로 요약해서 쓰면 안됨 */
   .cmn-btn {
     font-size: 0.875rem;
   }
+
+  .section {
+    padding: 4rem 0;
+  }
+
   .header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -75,8 +80,30 @@ ex. '.header .info li.sns'를 '.header li.sns'로 요약해서 쓰면 안됨 */
     width: 60%;
   }
 
-  /* 놓쳤다!! */
+  /* Feature Section Style */
   .features .feature {
+    padding: 1rem;
+  }
+
+  /* Slider Section Style */
+  .slider-section .swiper-slide > div.slider-text h4 {
+    font-size: 1.25rem;
+  }
+  .slider-section .slider-nav {
+    width: 45px;
+    height: 45px;
+  }
+
+  .slider-section .swiper-button-next:after,
+  .slider-section .swiper-button-prev:after {
+    font-size: 1rem;
+  }
+
+  .slider-section .swiper-button-prev {
+    left: 2rem;
+  }
+  .slider-section .swiper-button-next {
+    right: 2rem;
   }
 }
 
@@ -130,33 +157,27 @@ ex. '.header .info li.sns'를 '.header li.sns'로 요약해서 쓰면 안됨 */
     width: 100%;
   }
 
-  /* .features-section {
-    padding: 3rem;
+  /* Slider Section Style */
+  .slider-section .slider-nav {
+    display: none;
   }
 
-  .features-section .container {
-    width: 100%;
-  }
-
-  .features-section .features {
-    display: flex;
+  .slider-section .swiper-slide {
     flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .slider-section .swiper-slide > div {
+    width: 80%;
+    margin: auto;
+  }
+
+  .slider-section .slider-text {
     align-items: center;
+    text-align: center;
   }
 
-  .features .feature {
-    width: 60%;
-    padding: 0.75rem;
-  }
-
-  .features .feature h4 {
-    font-size: 1.1rem;
-  }
-
-  .features .feature p {
-    font-size: 0.75rem;
-  } */
-
+  /* Footer Style */
   footer .footer-upper,
   footer .footer-info,
   footer .footer-lower {
@@ -189,5 +210,10 @@ ex. '.header .info li.sns'를 '.header li.sns'로 요약해서 쓰면 안됨 */
   }
   .container {
     padding: 0 1.5rem;
+  }
+
+  /* Slider Section Style */
+  .slider-section .swiper-slide > div.slider-image {
+    width: 95%;
   }
 }

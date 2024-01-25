@@ -27,6 +27,7 @@
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
+  width: fit-content;
 }
 
 .cmn-btn:hover {
