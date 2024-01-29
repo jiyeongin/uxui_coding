@@ -436,6 +436,14 @@ header li.sns a img {
 .slider-section .swiper-slide > div {
   width: 50%;
   padding: 0 1.25rem;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.slider-section .swiper-slide > div.slider-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-section .swiper-slide > div.slider-text {
